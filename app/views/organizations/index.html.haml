@@ -1,0 +1,5 @@
+.container-fluid
+	- @orgs.each do |organization|
+		.row
+			.col-md-4.col-md-offset-4
+				= link_to "#{organization.name} page", organization_path(organization)

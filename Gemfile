@@ -53,6 +53,8 @@ gem 'validates_formatting_of'
 gem 'tzinfo-data'
 gem 'rails_12factor', group: :production
 gem 'annotate', '~> 2.6.6'
+gem "haml-rails", "~> 0.9"
+gem "erb2haml", :group => :development
 
 group :development, :test do
   gem 'dotenv-rails'

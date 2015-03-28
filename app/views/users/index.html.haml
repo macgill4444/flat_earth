@@ -1,0 +1,5 @@
+.container-fluid
+	- @users.each do |user|
+		.row
+			.col-md-4.col-md-offset-4
+				= link_to "#{user.email} page", user_path(user)

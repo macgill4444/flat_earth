@@ -14,6 +14,17 @@ ActiveAdmin.register Organization do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+  form do |f|
+    f.inputs 'Details' do
+      f.input :name
+      f.input :city
+      f.input :state
+      f.input :country, :as => :string
+      f.input :bio
+      f.input :addressed_issue
+    end
+    f.actions
+  end
 
 
 end
