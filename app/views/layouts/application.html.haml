@@ -7,23 +7,26 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-  %body
-    :javascript
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '351677998367759',
-          xfbml      : true,
-          version    : 'v2.3'
-        });
-      };
+    %link{:href => "http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}/    
+  %body  
+    :erb
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '351677998367759',
+            xfbml      : true,
+            version    : 'v2.3'
+          });
+        };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+        </script>
     = render partial: "partials/navbar"
     = bootstrap_flash
     = yield

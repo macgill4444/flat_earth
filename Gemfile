@@ -55,6 +55,7 @@ gem 'rails_12factor', group: :production
 gem 'annotate', '~> 2.6.6'
 gem "haml-rails", "~> 0.9"
 gem "erb2haml", :group => :development
+gem "flat-ui-rails"
 
 group :development, :test do
   gem 'dotenv-rails'
